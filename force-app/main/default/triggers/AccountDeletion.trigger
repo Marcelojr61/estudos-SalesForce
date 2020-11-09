@@ -5,7 +5,7 @@ trigger AccountDeletion on Account (before delete) {
                         Id IN :Trigger.old ]){
 
                             Trigger.oldMap.get(a.Id).addError(
-                                'Cannot delete account with  related opportunities.');
+                                'Cannot delete account with related opportunities.');
                         }
 
 }
