@@ -11,4 +11,21 @@ public with sharing class AccountHandler {
 
         return null;
     }
+
+    public static void insertAccount(Integer numNewAcc){
+
+        List<Account> addAccounts = new List<Account>();      
+        Integer n = 0;
+
+        while (n <= numNewAcc) {
+            addAccounts.add( 
+                new Account( 
+                    Name = 'Acme Inc ' + n,
+                    AccountNumber = 'A000' + n));
+            n = n+1;            
+        }
+
+        insert addAccounts;
+
+    }
 }
