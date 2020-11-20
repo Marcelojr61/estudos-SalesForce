@@ -24,4 +24,3 @@ public class TestVerifyDate {
         System.assertEquals(expected, returnDate, 'Date must be equal 2013-09-30');
     }
 }
-
